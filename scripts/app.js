@@ -81,6 +81,7 @@ if (navigator.mediaDevices.getUserMedia) {
       chunks = [];
       const audioURL = window.URL.createObjectURL(blob);
       audio.src = audioURL;
+audio.loop = true;
       console.log("recorder stopped");
 
       deleteButton.onclick = function(e) {
