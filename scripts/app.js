@@ -83,6 +83,14 @@ if (navigator.mediaDevices.getUserMedia) {
       audio.src = audioURL;
 audio.loop = true;
       console.log("recorder stopped");
+      
+      
+      var anchor = document.createElement('a');
+anchor.href = audioURL;
+anchor.target = '_blank';
+anchor.download = 'nigga-moving-so-fine.ogg';
+anchor.click();
+
 
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
