@@ -1,5 +1,5 @@
 // set up basic variables for app
-
+// yo yo yo yo
 const record = document.querySelector('.record');
 const stop = document.querySelector('.stop');
 const soundClips = document.querySelector('.sound-clips');
@@ -81,7 +81,16 @@ if (navigator.mediaDevices.getUserMedia) {
       chunks = [];
       const audioURL = window.URL.createObjectURL(blob);
       audio.src = audioURL;
+audio.loop = true;
       console.log("recorder stopped");
+      
+      
+      var anchor = document.createElement('a');
+anchor.href = audioURL;
+anchor.target = '_blank';
+anchor.download = 'nigga-moving-so-fine.ogg';
+anchor.click();
+
 
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
